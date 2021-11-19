@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: 0d53fb9b095910c419f63daa6e01e466
+importerOverride: Noesis.NoesisGUI.Editor::NoesisXamlImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 588a2920a0444fa4db46ce8339acffd4, type: 3}

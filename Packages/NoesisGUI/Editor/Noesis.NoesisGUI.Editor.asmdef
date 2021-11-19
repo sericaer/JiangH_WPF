@@ -1,0 +1,19 @@
+{
+    "name": "Noesis.NoesisGUI.Editor",
+    "rootNamespace": "",
+    "references": [
+        "Noesis.NoesisGUI",
+        "Unity.InputSystem"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
