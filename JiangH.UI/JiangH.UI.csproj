@@ -1,41 +1,36 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup>
-    <BaseIntermediateOutputPath>Blend\obj\</BaseIntermediateOutputPath>
-    <OutputPath>Blend\bin\$(Configuration)\</OutputPath>
-  </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B2072089-B438-4E2C-8A4E-33486D2555E9}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
-    <RootNamespace>JiangH</RootNamespace>
-    <AssemblyName>JiangH</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ProjectGuid>{BB2B81B3-47BD-4222-9C8C-F29ED06FD6E5}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <RootNamespace>JiangH.UI</RootNamespace>
+    <AssemblyName>JiangH.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
+    <DebugType>portable</DebugType>
     <Optimize>false</Optimize>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <OutputPath>..\Assets\StreamingAssets\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;JIANGH_UI</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -54,35 +49,37 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <ApplicationDefinition Include="Blend\App.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </ApplicationDefinition>
-    <Compile Include="Assets\Scenes\MainScene\JiangHMainView.xaml.cs">
-      <DependentUpon>JiangHMainView.xaml</DependentUpon>
+    <Compile Include="..\Assets\Resources\GUI\CloseAblePanel.cs">
+      <Link>CloseAblePanel.cs</Link>
     </Compile>
-    <Compile Include="Blend\App.xaml.cs">
-      <DependentUpon>App.xaml</DependentUpon>
+    <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <PackageReference Include="Noesis.GUI.Extensions">
-      <Version>3.0.*</Version>
-    </PackageReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Include="Assets\Scenes\MainScene\JiangHMainView.xaml">
+    <Page Include="..\Assets\Resources\GUI\Generic.xaml">
+      <Link>Themes\Generic.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="JiangH.UI\JiangH.UI.csproj">
-      <Project>{bb2b81b3-47bd-4222-9c8c-f29ed06fd6e5}</Project>
-      <Name>JiangH.UI</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Assets\Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

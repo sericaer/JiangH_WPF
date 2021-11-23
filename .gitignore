@@ -12,11 +12,14 @@
 /Release/
 /Blend/bin/
 /Blend/obj/
-/Native/bin/
+/Native/Blend/bin/
+/Native/Blend/obj/
 /Native/obj/
 /Kernels/bin/
 /Kernels/obj/
 /Packages/**
+/JiangH.UI/bin/
+/JiangH.UI/obj/
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta

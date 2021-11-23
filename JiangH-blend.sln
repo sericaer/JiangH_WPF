@@ -1,10 +1,12 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
+# Blend for Visual Studio Version 16
 VisualStudioVersion = 16.0.31321.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JiangH-blend", "JiangH-blend.csproj", "{B2072089-B438-4E2C-8A4E-33486D2555E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Native", "Native\Native.csproj", "{BB2B81B3-47BD-4222-9C8C-F29ED06FD6E5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JiangH.UI", "JiangH.UI\JiangH.UI.csproj", "{BB2B81B3-47BD-4222-9C8C-F29ED06FD6E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Native", "Native\Native.csproj", "{06E055C5-B480-4516-B3B9-7757D948BA60}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +22,10 @@ Global
 		{BB2B81B3-47BD-4222-9C8C-F29ED06FD6E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB2B81B3-47BD-4222-9C8C-F29ED06FD6E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB2B81B3-47BD-4222-9C8C-F29ED06FD6E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06E055C5-B480-4516-B3B9-7757D948BA60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06E055C5-B480-4516-B3B9-7757D948BA60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06E055C5-B480-4516-B3B9-7757D948BA60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06E055C5-B480-4516-B3B9-7757D948BA60}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
