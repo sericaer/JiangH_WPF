@@ -3,6 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.31321.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JiangH-blend", "JiangH-blend.csproj", "{B2072089-B438-4E2C-8A4E-33486D2555E9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{06E055C5-B480-4516-B3B9-7757D948BA60} = {06E055C5-B480-4516-B3B9-7757D948BA60}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JiangH.UI", "JiangH.UI\JiangH.UI.csproj", "{BB2B81B3-47BD-4222-9C8C-F29ED06FD6E5}"
 EndProject
