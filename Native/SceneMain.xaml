@@ -6,7 +6,10 @@
   xmlns:JiangH="clr-namespace:JiangH;assembly=JiangH.UI"
   mc:Ignorable="d" 
   d:DesignHeight="768" d:DesignWidth="1366">
-    
-    <JiangH:CloseAblePanel Content="CloseAblePanel" HorizontalAlignment="Left" Height="176.825" Margin="266.557,390.598,0,0" VerticalAlignment="Top" Width="366.845"/>
+    <Grid>
+        <JiangH:CloseAblePanel Margin="164.667,254,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="129" Width="412">
+            <JiangH:ImageButton x:Name="flower" Content="ImageButton" HorizontalAlignment="Left" Height="63.333" Margin="221.333,18,0,0" VerticalAlignment="Top" Width="185.334" Foreground="White"/>
+        </JiangH:CloseAblePanel>
 
+    </Grid>
 </UserControl>

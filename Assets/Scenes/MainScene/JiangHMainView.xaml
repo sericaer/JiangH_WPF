@@ -19,6 +19,7 @@
                 <StackPanel>
                     <TextBlock Text="Hello World" FontSize="30" Foreground="White"/>
                     <Button Content="Button" Margin="0,10,0,0"/>
+                    <JiangH:ImageButton x:Name="flower" Content="ImageButton" Margin="0,10,0,0"/>
                 </StackPanel>
             </Border>
         </JiangH:CloseAblePanel>

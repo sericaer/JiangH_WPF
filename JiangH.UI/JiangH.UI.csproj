@@ -52,6 +52,9 @@
     <Compile Include="..\Assets\Resources\GUI\CloseAblePanel.cs">
       <Link>CloseAblePanel.cs</Link>
     </Compile>
+    <Compile Include="..\Assets\Resources\GUI\ImageButton.cs">
+      <Link>ImageButton.cs</Link>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
