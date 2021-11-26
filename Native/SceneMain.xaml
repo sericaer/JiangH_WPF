@@ -6,10 +6,21 @@
   xmlns:JiangH="clr-namespace:JiangH;assembly=JiangH.UI"
   mc:Ignorable="d" 
   d:DesignHeight="768" d:DesignWidth="1366">
-    <Grid>
-        <JiangH:CloseAblePanel Margin="164.667,254,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="129" Width="412">
-            <JiangH:ImageButton x:Name="flower" Content="ImageButton" HorizontalAlignment="Left" Height="63.333" Margin="221.333,18,0,0" VerticalAlignment="Top" Width="185.334" Foreground="White"/>
-        </JiangH:CloseAblePanel>
-
-    </Grid>
+    <Canvas>
+        <StackPanel Orientation="Horizontal">
+            <JiangH:ImageButton x:Name="player" Width="120" Height="150">
+                <StackPanel>
+                    <Label Name ="name" Content="name"/>
+                    <Label Name ="office" Content="Office"/>
+                </StackPanel>
+            </JiangH:ImageButton>
+            <JiangH:ImageButton x:Name="business" Width="160" Height="30" VerticalAlignment="Top" Margin="2,0,0,0">
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Business"/>
+                    <Label Content=":"/>
+                    <Label Name ="businessValue" Content="--"/>
+                </StackPanel>
+            </JiangH:ImageButton>
+        </StackPanel>
+    </Canvas>
 </UserControl>
