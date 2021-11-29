@@ -20,7 +20,7 @@ namespace Mods.Native
     {
         public Person player { get; set; }
 
-        public event PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangedEventHandler PropertyChanged { add { } remove { } }
 
         public SceneMainView()
         {
@@ -33,6 +33,7 @@ namespace Mods.Native
     {
         public string name { get; set; }
 
-        public event PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangedEventHandler PropertyChanged { add { } remove { } }
+
     }
 }

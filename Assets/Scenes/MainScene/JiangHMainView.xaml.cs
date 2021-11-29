@@ -2,15 +2,12 @@
 #define NOESIS
 using Noesis;
 #else
-using System;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Input;
 using System.Windows.Markup;
 #endif
 using System;
 using System.IO;
-using System.ComponentModel;
 using System.Reflection;
 
 namespace JiangH
@@ -63,33 +60,5 @@ namespace JiangH
 #endif
 
 
-    }
-}
-
-namespace TT
-{
-    public class Test : INotifyPropertyChanged
-    {
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        public int a { get; set; }
-        public Inner inner { get; set; }
-
-        public Test()
-        {
-            a = 2000;
-        }
-    }
-
-    public class Inner : INotifyPropertyChanged
-    {
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        public int b { get; set; }
-
-        public Inner()
-        {
-            b = 3000;
-        }
     }
 }
