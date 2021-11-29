@@ -5,6 +5,7 @@
   xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
   xmlns:noesis="clr-namespace:NoesisGUIExtensions;assembly=Noesis.GUI.Extensions"
   xmlns:JiangH="clr-namespace:JiangH;assembly=JiangH.UI"
+  xmlns:TT="clr-namespace:TT"
   mc:Ignorable="d" 
   d:DesignHeight="768" d:DesignWidth="1366">
 
@@ -13,7 +14,9 @@
     </noesis:Xaml.Dependencies>
 
     <Canvas x:Name="rootCanvas">
-
-
+        <!--<Canvas.DataContext>
+            <TT:Test/>
+        </Canvas.DataContext>
+        <Label Content="{Binding Path=inner.b, FallbackValue = '1234'}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="54" Canvas.Left="166" Canvas.Top="119"/>-->
     </Canvas>
 </UserControl>
