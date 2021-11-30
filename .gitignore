@@ -22,6 +22,8 @@
 /JiangH.UI/obj/
 /Mod.Native/obj/
 /Mod.Native/bin/
+/JiangHKernel/bin/
+/JiangHKernel/obj/
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta

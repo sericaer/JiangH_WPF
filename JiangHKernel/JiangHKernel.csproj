@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{BB2B81B3-47BD-4222-9C8C-F29ED06FD6E5}</ProjectGuid>
     <OutputType>library</OutputType>
-    <RootNamespace>JiangH.UI</RootNamespace>
-    <AssemblyName>JiangH.UI</AssemblyName>
+    <RootNamespace>JiangHKernel</RootNamespace>
+    <AssemblyName>JiangHKernel</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -27,7 +27,7 @@
     <DebugType>portable</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>..\Assets\StreamingAssets\</OutputPath>
-    <DefineConstants>TRACE;DEBUG;JIANGH_UI</DefineConstants>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <DebugSymbols>true</DebugSymbols>
@@ -50,10 +50,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\Assets\Resources\GUI\CloseAblePanel.cs">
-      <Link>CloseAblePanel.cs</Link>
+      <Link>UI\CloseAblePanel.cs</Link>
     </Compile>
     <Compile Include="..\Assets\Resources\GUI\ImageButton.cs">
-      <Link>ImageButton.cs</Link>
+      <Link>UI\ImageButton.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

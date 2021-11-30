@@ -90,13 +90,12 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\JiangH.UI\JiangH.UI.csproj">
+    <ProjectReference Include="..\JiangHKernel\JiangHKernel.csproj">
       <Project>{bb2b81b3-47bd-4222-9c8c-f29ed06fd6e5}</Project>
-      <Name>JiangH.UI</Name>
+      <Name>JiangHKernel</Name>
       <Private>False</Private>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Page Include="Blend\App.xaml">
       <Generator>MSBuild:Compile</Generator>

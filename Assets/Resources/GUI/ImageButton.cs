@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 #endif
 
-namespace JiangH
+namespace JiangHKernel.UI
 {
     public class ImageButton : Button
     {

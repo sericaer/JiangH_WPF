@@ -6,7 +6,7 @@ using System.Windows;
 using System.Windows.Controls;
 #endif
 
-namespace JiangH
+namespace JiangHKernel.UI
 {
 
     [TemplatePart(Name = "CloseButton", Type = typeof(Button))]

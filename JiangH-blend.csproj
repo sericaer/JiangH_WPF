@@ -76,13 +76,13 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="JiangH.UI\JiangH.UI.csproj">
-      <Project>{bb2b81b3-47bd-4222-9c8c-f29ed06fd6e5}</Project>
-      <Name>JiangH.UI</Name>
-    </ProjectReference>
+    <Folder Include="Assets\Resources\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Assets\Resources\" />
+    <ProjectReference Include="JiangHKernel\JiangHKernel.csproj">
+      <Project>{bb2b81b3-47bd-4222-9c8c-f29ed06fd6e5}</Project>
+      <Name>JiangHKernel</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

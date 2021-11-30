@@ -27,13 +27,10 @@ namespace JiangH
             var filePath = "../../../Assets/StreamingAssets";
 #endif
 
-            var path = "D:\\git\\JiangH\\Assets\\StreamingAssets\\mods\\native\\Assembly.dll";
+
             var str = File.ReadAllText(filePath + "/mods/native/SceneMain.xaml");
 
-            var ass = Assembly.LoadFile(path);
-
-            AppDomain.CurrentDomain.Load(ass.GetName());
-            var Assemblies = AppDomain.CurrentDomain.GetAssemblies();
+            var ass = Assembly.Load(File.ReadAllBytes(filePath + "/mods/native/Assembly.dll"));
 
             var userControl = XamlReader.Parse(str) as UserControl;
 
