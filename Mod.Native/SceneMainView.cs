@@ -1,39 +1,27 @@
 ﻿using System;
-using System.Collections.Generic;
+using JiangH.Kernel;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using ReactiveMarbles.PropertyChanged;
 
 namespace Mods.Native
 {
     public class SceneMainView : INotifyPropertyChanged
     {
-        public Person player { get; set; }
-
         public event PropertyChangedEventHandler PropertyChanged { add { } remove { } }
+
+        public IPerson player { get; set; }
 
         public SceneMainView()
         {
-            player = new Person();
-            player.name = "NAME1";
+            DataBase.inst.WhenChanged(x => x.player).Subscribe(p => this.player = p);
         }
     }
 
     public class Person : INotifyPropertyChanged
     {
-        public string name { get; set; }
-
         public event PropertyChangedEventHandler PropertyChanged { add { } remove { } }
+
+        public string name { get; set; }
 
     }
 }

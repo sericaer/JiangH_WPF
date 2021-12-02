@@ -69,6 +69,12 @@
     <PackageReference Include="Noesis.GUI.Extensions">
       <Version>3.0.*</Version>
     </PackageReference>
+    <PackageReference Include="PropertyChanged.Fody">
+      <Version>3.4.0</Version>
+    </PackageReference>
+    <PackageReference Include="ReactiveMarbles.PropertyChanged">
+      <Version>2.0.6</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Page Include="Assets\Scenes\MainScene\JiangHMainView.xaml">
@@ -79,9 +85,15 @@
     <Folder Include="Assets\Resources\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="JiangHKernel\JiangHKernel.csproj">
+    <ProjectReference Include="JiangH.Kernel\JiangH.Kernel.csproj">
+      <Project>{fcc02eb3-7a21-4d05-9fbc-effde7bfd74a}</Project>
+      <Name>JiangH.Kernel</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="JiangH.UI\JiangH.UI.csproj">
       <Project>{bb2b81b3-47bd-4222-9c8c-f29ed06fd6e5}</Project>
-      <Name>JiangHKernel</Name>
+      <Name>JiangH.UI</Name>
+      <Private>True</Private>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

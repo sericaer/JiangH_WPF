@@ -9,6 +9,7 @@ using System.Windows.Markup;
 using System;
 using System.IO;
 using System.Reflection;
+using JiangH.Kernel;
 
 namespace JiangH
 {
@@ -22,15 +23,20 @@ namespace JiangH
             InitializeComponent();
 
 #if NOESIS
-            var filePath = UnityEngine.Application.streamingAssetsPath;
+            var streamingAssetsPath = UnityEngine.Application.streamingAssetsPath;
 #else
-            var filePath = "../../../Assets/StreamingAssets";
+            var streamingAssetsPath = "../../../Assets/StreamingAssets";
 #endif
 
+            DataBase.inst = new DataBase();
+            DataBase.inst.player = new Person();
+            DataBase.inst.player.fullName = "fullName";
 
-            var str = File.ReadAllText(filePath + "/mods/native/SceneMain.xaml");
+            var str = File.ReadAllText(streamingAssetsPath + "/mods/native/SceneMain.xaml");
 
-            var ass = Assembly.Load(File.ReadAllBytes(filePath + "/mods/native/Assembly.dll"));
+            //var ass1 = Assembly.Load(File.ReadAllBytes(@"D:\git\JiangH\Assets\Managed\JiangH.Kernel.dll"));
+
+            var ass = Assembly.Load(File.ReadAllBytes(streamingAssetsPath + "/mods/native/Assembly.dll"));
 
             var userControl = XamlReader.Parse(str) as UserControl;
 

@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:jui="clr-namespace:JiangHKernel.UI;assembly=JiangHKernel"
+             xmlns:jui="clr-namespace:JiangH.UI;assembly=JiangH.UI"
+             xmlns:jk="clr-namespace:JiangH.Kernel;assembly=JiangH.Kernel"
              xmlns:native="clr-namespace:Mods.Native;assembly=Assembly"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
@@ -11,15 +12,15 @@
         <Canvas.DataContext>
             <native:SceneMainView/>
         </Canvas.DataContext>
-        
-        <jui:CloseAblePanel HorizontalAlignment="Left" Height="174" Margin="160,170,0,0" VerticalAlignment="Top" Width="246">
+
+        <jui:CloseAblePanel HorizontalAlignment="Left" Height="174" Margin="160,170,0,0" VerticalAlignment="Top" Width="246" BorderThickness="0.5" BorderBrush="Black">
             <Button Content="Button" HorizontalAlignment="Left" Height="38" Margin="74,66,0,0" VerticalAlignment="Top" Width="88"/>
         </jui:CloseAblePanel>
-        
+
         <StackPanel Orientation="Horizontal">
             <jui:ImageButton x:Name="player" Width="120" Height="150">
                 <StackPanel>
-                    <Label Name ="name" Content="{Binding player.name,FallbackValue = '_PLAYER_NAME_'}"/>
+                    <Label Name ="name" Content="{Binding player.fullName,FallbackValue = '_PLAYER_NAME_'}"/>
                     <Label Name ="office" Content="Office"/>
                 </StackPanel>
             </jui:ImageButton>
@@ -31,6 +32,7 @@
                 </StackPanel>
             </jui:ImageButton>
         </StackPanel>
+        <Button Content="Button" Height="0" Canvas.Left="287" Canvas.Top="75" Width="44"/>
 
     </Canvas>
 </UserControl>

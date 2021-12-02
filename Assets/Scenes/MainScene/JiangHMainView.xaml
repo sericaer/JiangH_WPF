@@ -4,7 +4,7 @@
   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
   xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
   xmlns:noesis="clr-namespace:NoesisGUIExtensions;assembly=Noesis.GUI.Extensions"
-  xmlns:jui="clr-namespace:JiangHKernel.UI;assembly=JiangHKernel"
+  xmlns:jui="clr-namespace:JiangH.UI;assembly=JiangH.UI"
   mc:Ignorable="d" 
   d:DesignHeight="768" d:DesignWidth="1366">
 

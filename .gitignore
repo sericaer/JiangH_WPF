@@ -20,6 +20,8 @@
 /Packages/**
 /JiangH.UI/bin/
 /JiangH.UI/obj/
+/JiangH.Kernel/bin/
+/JiangH.Kernel/obj/
 /Mod.Native/obj/
 /Mod.Native/bin/
 /JiangHKernel/bin/
