@@ -16,12 +16,13 @@ namespace JiangH.UI
 {
     static class ModImageBrush
     {
-        internal static Brush Create(string imageFileName, string defaultImageName)
+        internal static Brush Create(string modName, string imageFileName, string defaultImageName)
         {
-            var path = $"D:\\git\\JiangH\\Assets\\StreamingAssets\\mods\\native\\images\\{imageFileName}";
+            var path = System.IO.Path.Combine(Global.modRootPath, modName, "images", imageFileName);
+
             if (!File.Exists(path))
             {
-                path = $"D:\\git\\JiangH\\Assets\\StreamingAssets\\mods\\native\\images\\{defaultImageName}";
+                path = System.IO.Path.Combine(Global.modRootPath, modName, "images", defaultImageName);
             }
 #if NOESIS
             var fileData = File.ReadAllBytes(path);
@@ -32,6 +33,25 @@ namespace JiangH.UI
             var image = new BitmapImage(new Uri(path));
             return new ImageBrush(image);
 #endif
+        }
+
+        
+    }
+
+    public static class Global
+    {
+        public static string modRootPath
+        {
+            get
+            {
+#if NOESIS
+                return Application.streamingAssetsPath + "/mods/";
+#else
+                //return System.IO.Path.GetFullPath("../../../Assets/StreamingAssets/mods");
+
+                return $"D:\\git\\JiangH\\Assets\\StreamingAssets\\mods";
+#endif
+            }
         }
     }
 }

@@ -10,6 +10,7 @@ using System;
 using System.IO;
 using System.Reflection;
 using JiangH.Kernel;
+using JiangH.UI;
 
 namespace JiangH
 {
@@ -22,23 +23,36 @@ namespace JiangH
         {
             InitializeComponent();
 
-#if NOESIS
-            var streamingAssetsPath = UnityEngine.Application.streamingAssetsPath;
-#else
-            var streamingAssetsPath = "../../../Assets/StreamingAssets";
-#endif
+//#if NOESIS
+//            Global.modRootPath = UnityEngine.Application.streamingAssetsPath + "/mods";
+//#else
+//            Global.modRootPath = System.IO.Path.GetFullPath("../../../Assets/StreamingAssets/mods");
+//#endif
+
+            //ModManager.inst = new ModManager();
+
+            //DataBase.inst = new DataBase();
+
+            //var userControl = XamlReader.Parse(ModManager.inst.native.xamlDict["SceneMain"]) as UserControl;
+
+            //var uiElement = userControl.Content as UIElement;
+            //userControl.Content = null;
+
+            //this.rootCanvas.Children.Add(uiElement);
+
 
             DataBase.inst = new DataBase();
             DataBase.inst.player = new Person();
             DataBase.inst.player.fullName = "fullName";
 
-            var str = File.ReadAllText(streamingAssetsPath + "/mods/native/SceneMain.xaml");
+            var str = File.ReadAllText(Global.modRootPath + "/native/SceneMain.xaml");
 
             //var ass1 = Assembly.Load(File.ReadAllBytes(@"D:\git\JiangH\Assets\Managed\JiangH.Kernel.dll"));
 
-            var ass = Assembly.Load(File.ReadAllBytes(streamingAssetsPath + "/mods/native/Assembly.dll"));
+            var ass = Assembly.Load(File.ReadAllBytes(Global.modRootPath + "/native/Assembly.dll"));
 
             var userControl = XamlReader.Parse(str) as UserControl;
+
 
             var uiElement = userControl.Content as UIElement;
             userControl.Content = null;

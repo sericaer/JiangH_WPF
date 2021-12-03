@@ -16,12 +16,4 @@ namespace Mods.Native
             DataBase.inst.WhenChanged(x => x.player).Subscribe(p => this.player = p);
         }
     }
-
-    public class Person : INotifyPropertyChanged
-    {
-        public event PropertyChangedEventHandler PropertyChanged { add { } remove { } }
-
-        public string name { get; set; }
-
-    }
 }

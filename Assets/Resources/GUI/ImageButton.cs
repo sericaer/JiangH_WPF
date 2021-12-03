@@ -27,8 +27,10 @@ namespace JiangH.UI
         {
             get
             {
+                var modName = this.FindResource("modName") as string;
+
                 var imageFileName = Name == null || Name == "" ? defaultImageName : $"BUTTON_IMAGE_{Name}.jpg";
-                return ModImageBrush.Create(imageFileName, defaultImageName);
+                return ModImageBrush.Create(modName, imageFileName, defaultImageName);
             }
         }
     }

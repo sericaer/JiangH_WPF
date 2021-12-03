@@ -6,13 +6,21 @@
              xmlns:jui="clr-namespace:JiangH.UI;assembly=JiangH.UI"
              xmlns:jk="clr-namespace:JiangH.Kernel;assembly=JiangH.Kernel"
              xmlns:native="clr-namespace:Mods.Native;assembly=Assembly"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+
     <Canvas>
         <Canvas.DataContext>
             <native:SceneMainView/>
         </Canvas.DataContext>
 
+        <Canvas.Resources>
+            <ResourceDictionary>
+                <sys:String x:Key="modName">native</sys:String>
+            </ResourceDictionary>
+        </Canvas.Resources>
+        
         <jui:CloseAblePanel HorizontalAlignment="Left" Height="174" Margin="160,170,0,0" VerticalAlignment="Top" Width="246" BorderThickness="0.5" BorderBrush="Black">
             <Button Content="Button" HorizontalAlignment="Left" Height="38" Margin="74,66,0,0" VerticalAlignment="Top" Width="88"/>
         </jui:CloseAblePanel>

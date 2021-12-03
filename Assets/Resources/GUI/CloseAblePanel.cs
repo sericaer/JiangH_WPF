@@ -1,6 +1,8 @@
 ﻿#if UNITY_5_3_OR_NEWER
 #define NOESIS
 using Noesis;
+using UnityEngine;
+
 #else
 using System.Windows;
 using System.Windows.Controls;
@@ -24,8 +26,11 @@ namespace JiangH.UI
         {
             get
             {
+                var path = System.IO.Path.GetFullPath(".");
+
+                var modName = this.FindResource("modName") as string;
                 var imageFileName = Name == null || Name == "" ? defaultImageName : $"PANEL_IMAGE_{Name}.jpg";
-                return ModImageBrush.Create(imageFileName, defaultImageName);
+                return ModImageBrush.Create(modName, imageFileName, defaultImageName);
             }
         }
 
